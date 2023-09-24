@@ -1,0 +1,31 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form-box{
+    text-align: center;
+}
+
+.btn-style{
+    margin-top: 10px;
+}
+
+.displayReviews{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+header{
+    background-color: #dbc441;
+}
+
+input{
+    border: 1px solid #dbc441;
+    font: inherit;
+    border-radius: 2px;
+}
