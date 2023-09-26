@@ -101,17 +101,31 @@ async function display(reviewObj) {
 
 //  filtering items
 
-function filterItems(e) {
-    let text = e.target.value || "";
-    let ul = document.getElementById('reviewsBox')
-    Array.from(ul.getElementsByClassName('li-js')).forEach(item => {
+// function filterItems(e) {
+//     let text = e.target.value || "";
+//     let ul = document.getElementById('reviewsBox')
+//     Array.from(ul.getElementsByClassName('li-js')).forEach(item => {
 
-        if (item.textContent.indexOf(text) !== -1) {
-            item.style.display = 'block'
+//         if (item.textContent.indexOf(text) !== -1) {
+//             item.style.display = 'block'
+//         } else {
+//             item.style.display = 'none';
+//         }
+
+//     })
+// }
+
+function filterItems(e) {
+    let text = (e.target.value || "").toLowerCase(); // Convert filter text to lowercase
+    let ul = document.getElementById('reviewsBox');
+    Array.from(ul.getElementsByClassName('li-js')).forEach(item => {
+        let itemText = item.textContent.toLowerCase(); // Convert item's text to lowercase
+        if (itemText.indexOf(text) !== -1) {
+            item.style.display = 'block';
         } else {
             item.style.display = 'none';
         }
-
-    })
+    });
 }
+
 
